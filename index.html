@@ -2,46 +2,124 @@
 <html>
 <head>
   <title>Om's Novel World</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body{
-      margin:0;
-      font-family:Arial;
-      background:linear-gradient(135deg,#ff512f,#dd2476);
-      color:white;
-      text-align:center;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
     }
-    header{
-      padding:30px;
+
+    header {
+      padding: 30px;
+      font-size: 32px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.3);
     }
-    .box{
-      background:white;
-      color:black;
-      margin:20px;
-      padding:20px;
-      border-radius:10px;
+
+    .container {
+      padding: 20px;
     }
-    button{
-      padding:10px;
-      margin:10px;
-      background:#222;
-      color:white;
-      border:none;
-      cursor:pointer;
+
+    .chapter-btn {
+      display: block;
+      width: 200px;
+      margin: 15px auto;
+      padding: 12px;
+      background: white;
+      color: #2575fc;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .chapter-btn:hover {
+      background: #ffdd57;
+      color: black;
+    }
+
+    .chapter {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 15px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: rgba(0,0,0,0.3);
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Om's Novel World</h1>
-  <p>Welcome to my official novel website</p>
+  📖 Om's Fantasy Novel
 </header>
 
-<div class="box">
-  <h2>Chapter 1 - The Strange Message</h2>
-  <p>Suryansh received a strange message that changed everything...</p>
+<div class="container">
+
+  <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Book Image">
+
+  <h2>Select a Chapter</h2>
+
+  <a href="#" class="chapter-btn" onclick="showChapter(1)">Chapter 1</a>
+  <a href="#" class="chapter-btn" onclick="showChapter(2)">Chapter 2</a>
+  <a href="#" class="chapter-btn" onclick="showChapter(3)">Chapter 3</a>
+
+  <div id="chapter1" class="chapter">
+    <h3>Chapter 1 - The Beginning</h3>
+    <p>
+      The night was silent. A cold wind moved through the empty streets.
+      Arjun stood alone under the broken streetlight.
+      He didn't know this night would change his life forever...
+    </p>
+  </div>
+
+  <div id="chapter2" class="chapter">
+    <h3>Chapter 2 - The Secret</h3>
+    <p>
+      The mysterious letter burned in his hand.
+      "You are not who you think you are."
+      His heart started racing...
+    </p>
+  </div>
+
+  <div id="chapter3" class="chapter">
+    <h3>Chapter 3 - The Power Awakens</h3>
+    <p>
+      Energy rushed through his veins.
+      The ground trembled.
+      Something ancient had awakened inside him...
+    </p>
+  </div>
+
 </div>
+
+<footer>
+  © 2026 Om's Novel World | All Rights Reserved
+</footer>
+
+<script>
+  function showChapter(num) {
+    document.getElementById("chapter1").style.display = "none";
+    document.getElementById("chapter2").style.display = "none";
+    document.getElementById("chapter3").style.display = "none";
+
+    document.getElementById("chapter" + num).style.display = "block";
+  }
+</script>
 
 </body>
 </html>
